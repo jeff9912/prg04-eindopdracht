@@ -139,6 +139,7 @@ export class Player extends Actor {
     hit(event) {
         if (event.other.owner instanceof Zombie) {
             this.#lives--;
+            event.other.owner.kill();
             if (this.#lives <= 0) {
                 this.#lives = 3;
                 window.currentGame.stop();
