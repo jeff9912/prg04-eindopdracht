@@ -5,7 +5,8 @@ const Resources = {
     Player: new ImageSource('images/player.png'),
     Grass: new ImageSource('images/grass.png'),
     Zombie: new ImageSource('images/zombie.png'),
-    Projectile: new ImageSource('images/projectile.png')
+    Projectile: new ImageSource('images/projectile.png'),
+    PlayerTwo: new ImageSource('images/playertwo.png')
 }
 
 

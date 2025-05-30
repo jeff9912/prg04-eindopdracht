@@ -37,10 +37,10 @@ export class Game extends Engine {
         this.add(uip2)
 
 
-        const player = new Player(ui, 1);
+        const player = new Player(ui, 1, window.currentGame);
         this.add(player);
 
-        const playerTwo = new Player(uip2, 2)
+        const playerTwo = new Player(uip2, 2, window.currentGame)
         this.add(playerTwo)
 
 
@@ -50,11 +50,12 @@ export class Game extends Engine {
             const zombie = new Zombie(randomNumber, player, playerTwo);
             this.add(zombie);
 
-        }, 2000);
+        }, 1700);
 
     }
 
 
 }
 
-new Game()
+
+window.currentGame = new Game();

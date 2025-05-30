@@ -11,7 +11,6 @@ export class Projectile extends Actor {
         this.graphics.use(Resources.Projectile.toSprite());
         this.pos = new Vector(x, y)
         this.scale = new Vector(0.4, 0.4)
-        this.points = 0;
         this.ui = ui;
     }
 
@@ -23,7 +22,7 @@ export class Projectile extends Actor {
         if (event.other.owner instanceof Zombie) {
             event.other.owner.kill();
             if (this.ui) {
-                this.ui.setScore(this.ui.score + 10); // Use the instance, not the class
+                this.ui.setScore(this.ui.score + 10);
             }
             this.kill();
         }
