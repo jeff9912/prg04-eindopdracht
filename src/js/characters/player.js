@@ -35,6 +35,7 @@ export class Player extends Actor {
     }
 
     onPreUpdate(engine) {
+        //reset variabele input
         this.#xspeed = 0;
         this.#yspeed = 0;
         this.#bulletx = 0;
